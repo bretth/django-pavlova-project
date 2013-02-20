@@ -3,5 +3,5 @@ bpython==0.12
 django-braces==0.2.1
 git+git://github.com/jezdez/django-configurations.git@c5c0feff9fbafb5f1d007f421e8355668a5a8868#egg=configurations
 django-model-utils==1.1.0
-djset==0.1.3
+djset==0.2.2
 South==0.7.6
