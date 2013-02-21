@@ -10,8 +10,8 @@ if __name__ == "__main__":
     site.addsitedir('project')
 
     from djset import secret, config
-    
-    secret.prompt = True
+    from djset.utils import getbool
+    secret.prompt = getbool('SETTINGS_PROMPT', True)
     config.prompt = secret.prompt
 
     from configurations.management import execute_from_command_line

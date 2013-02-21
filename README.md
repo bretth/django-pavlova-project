@@ -16,14 +16,17 @@ If you listened to your mamma about running unknown shell scripts from the web, 
     $ pip install django
     $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json dessert .
     $ pip install -r requirements/dev.txt
+    $ chmod +x manage.py
     $ python manage.py syncdb --noinput
 
 A superuser is created by default (in development only) with the login and password ``admin``.
 
-Deployment
------------
+Deployment Notes
+------------------
 
-You should only need to change one environment variable in production ``DJANGO_CONFIGURATION=ProductionSettings``.
+Project deployment is out of scope for this template, but you should only need to change one environment variable in production ``DJANGO_CONFIGURATION=ProductionSettings``. You can also set ``SETTINGS_PROMPT=False`` if you don't want to be prompted for missing secrets.
+
+Unlike some recommendations to use django-admin.py in production, you will need to use *manage.py*. You can edit that to customize environment variables defaults before settings are loaded. 
 
     
 Project Template Notes
@@ -39,7 +42,7 @@ The pavlova project templates is intended for larger projects where the standard
 
 Pavlova uses the sqlite3 database for development and testing. If you use any postgresql specific features however, then it stands you should develop and test against the same postgresql version that is in production.
 
-A *dev* app holds local fixtures (or factory objects) for loading into the development environment starting with a superuser
+A *dev* app holds local fixtures (or factory objects) for loading into the development environment starting with a superuser.
 
 Semantics matter. Class mixins in settings classes named RedisCache and LocalMemCache are more meaningful than ProdCache and DevCache. A glance at ProductionSettings should tell a lot about how the project is configured.
 
