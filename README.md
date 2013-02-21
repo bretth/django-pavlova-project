@@ -11,14 +11,19 @@ First, make sure you are using virtualenv, and virtualenvwrapper (http://virtual
     $ mkproject dessert
     $ bash <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
 
-If you listened to your mamma about running unknown shell scripts, the bootstrap.sh script is just a shortcut for the following::
+If you listened to your mamma about running unknown shell scripts from the web, the bootstrap.sh script is just a shortcut for the following::
 
     $ pip install django
-    $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json dessert
+    $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json dessert .
     $ pip install -r requirements/dev.txt
-    $ ./manage.py syncdb --noinput
+    $ python manage.py syncdb --noinput
 
 A superuser is created by default (in development only) with the login and password ``admin``.
+
+Deployment
+-----------
+
+You should only need to change one environment variable in production ``DJANGO_CONFIGURATION=ProductionSettings``.
 
     
 Project Template Notes
@@ -33,6 +38,8 @@ The pavlova project templates is intended for larger projects where the standard
  - the settings file shuffle when injecting a new app's configuration, otherwise know as 'where in the world does this setting go'.
 
 Pavlova uses the sqlite3 database for development and testing. If you use any postgresql specific features however, then it stands you should develop and test against the same postgresql version that is in production.
+
+A *dev* app holds local fixtures (or factory objects) for loading into the development environment starting with a superuser
 
 Semantics matter. Class mixins in settings classes named RedisCache and LocalMemCache are more meaningful than ProdCache and DevCache. A glance at ProductionSettings should tell a lot about how the project is configured.
 

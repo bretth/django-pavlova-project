@@ -10,9 +10,8 @@ if __name__ == "__main__":
     site.addsitedir('project')
 
     from djset import secret, config
-    dj_config = os.getenv('DJANGO_CONFIGURATION')
-    # Prompt for development, raise error or use defaults for other
-    secret.prompt = dj_config == 'DevSettings'
+    
+    secret.prompt = True
     config.prompt = secret.prompt
 
     from configurations.management import execute_from_command_line
