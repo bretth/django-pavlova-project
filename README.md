@@ -6,33 +6,20 @@ A project template for Django 1.5 using django-configurations for class based se
 Creating your project
 ----------------------
 
-First, make sure you are using virtualenv, and virtualenvwrapper (http://virtualenvwrapper.readthedocs.org). To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first::
-
-    $ bash <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
-
-First create your project folder and virtualenv environment::
+First, make sure you are using virtualenv, and virtualenvwrapper (http://virtualenvwrapper.readthedocs.org). To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
 
     $ mkproject dessert
+    $ bash <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
 
-To create a new Django project called '**dessert**' using django-pavlova-project, run the following command (this assumes you have Django 1.5 or 1.4 installated aready)::
+If you listened to your mamma about running unknown shell scripts, the bootstrap.sh script is just a shortcut for the following::
 
+    $ pip install django
     $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json dessert
-
-You can choose a different name by running the same command but replacing the word '**dessert**' with something else.
-
-Then, depending on where you are installing dependencies:
-
-In development::
-
     $ pip install -r requirements/dev.txt
     $ ./manage.py syncdb --noinput
 
 A superuser is created by default (in development only) with the login and password ``admin``.
 
-For production::
-
-    $ pip install -r requirements.txt
-    
     
 Project Template Notes
 ------------------------
@@ -57,4 +44,4 @@ For local app configuration Pavlova recommends defining your defaults in an app_
 Acknowledgements
 -----------------
 
-    - The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings.
+ - The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings.
