@@ -52,7 +52,7 @@ class ProductionSettings(
 
     def MANAGERS(self):
         # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
-        return self.ADMINS
+        return self.ADMINS()
     
     def SECRET_KEY(self):
         return secret.get('SECRET_KEY')
