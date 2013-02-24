@@ -4,15 +4,14 @@ import site
 import sys
 
 if __name__ == "__main__":
-    
+      
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{ project_name }}.settings')
     os.environ.setdefault('DJANGO_CONFIGURATION', 'DevSettings')
     site.addsitedir('project')
+    
+    import {{ project_name }}.startup as startup
 
-    from djset import secret, config
-    from djset.utils import getbool
-    secret.prompt = getbool('SETTINGS_PROMPT', True)
-    config.prompt = secret.prompt
+    startup.run()
 
     from configurations.management import execute_from_command_line
 
