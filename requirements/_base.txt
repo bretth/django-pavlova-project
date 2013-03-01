@@ -1,7 +1,10 @@
-https://www.djangoproject.com/download/1.5c1/tarball/
 bpython==0.12
+d2to1==0.2.7
 django-braces==0.2.1
-git+git://github.com/jezdez/django-configurations.git@c5c0feff9fbafb5f1d007f421e8355668a5a8868#egg=configurations
+git+git://github.com/jezdez/django-configurations.git#egg=configurations
 django-model-utils==1.1.0
-djset==0.2.2
+git+git://github.com/bretth/djset.git#egg=djset
+# psycopg2==2.4.6
 South==0.7.6
+# install the local setup.py package
+-e .

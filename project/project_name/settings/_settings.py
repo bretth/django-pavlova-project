@@ -32,8 +32,7 @@ class BaseSettings(
 
 
 class ProductionSettings(
-    # Add Cache class
-    PostgresDB,
+    # PostgresDB,
     EmailSMTP,
     LoggingSendEmail,
     BaseSettings):
@@ -79,5 +78,4 @@ class TestSettings(
     DummyCache,
     BaseSettings):
     
-    DEBUG = False
-    TEMPLATE = DEBUG
+    pass
