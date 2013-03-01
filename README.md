@@ -21,6 +21,10 @@ If you listened to your mamma about running unknown shell scripts from the web, 
 
 A superuser is created by default (in development only) with the login and password ``admin``.
 
+If everything went well, open your browser and point to the django admin:
+
+    http://localhost:8000/admin/
+
 You should replace this README with your own.
 
 Deployment Notes
