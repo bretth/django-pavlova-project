@@ -11,22 +11,24 @@ First, make sure you are using virtualenv, and virtualenvwrapper (http://virtual
     $ mkproject dessert
     $ bash <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
 
-If you listened to your mamma about running unknown shell scripts from the web, the bootstrap.sh script is just a shortcut for the following::
+If you listened to your mamma about running unknown shell scripts from the web, the bootstrap.sh script is just a shortcut for the following:
 
     $ pip install django
-    $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json dessert .
+    $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json,cfg dessert .
     $ pip install -r requirements/dev.txt
     $ chmod +x manage.py
     $ python manage.py syncdb --noinput
 
 A superuser is created by default (in development only) with the login and password ``admin``.
 
+You should replace this README with your own.
+
 Deployment Notes
 ------------------
 
 Project deployment is out of scope for this template, but you should only need to change one environment variable in production ``DJANGO_CONFIGURATION=ProductionSettings``. You can also set ``SETTINGS_PROMPT=False`` if you don't want to be prompted for missing secrets (and have an error raised instead).
 
-Unlike some recommendations to use django-admin.py in production, you will need to use *manage.py*. You can edit that to customize environment variables defaults before settings are loaded. 
+Unlike some recommendations to use django-admin.py in production, you will need to use *manage.py*. You can edit that to customize environment variables defaults before settings are loaded. When using the *wsgi.py* as the entry point to your django project you will need to ensure you add the project to the path.  
 
     
 Project Template Notes
@@ -38,20 +40,16 @@ The pavlova project templates is intended for larger projects where the standard
  - Diverging production and development/testing settings
  - non-versioned local development settings
  - commenting out blocks of settings to switch configuration
- - the settings file shuffle when injecting a new app's configuration, otherwise know as 'where in the world does this setting go'.
+ - the settings file shuffle when injecting a new app's configuration, otherwise known as 'where in the world does this setting go'.
 
-Pavlova uses the sqlite3 database for development and testing. If you use any postgresql specific features however, then it stands you should develop and test against the same postgresql version that is in production.
+Pavlova uses the sqlite3 database for a quickstart however switching to postgresql is recommended for all but the smallest projects.
+
+A minimal setup.cfg and setup.py is used to install the project in the path, and hold project metadata.
 
 A *dev* app holds local fixtures (or factory objects) for loading into the development environment starting with a superuser.
-
-Semantics matter. Class mixins in settings classes named RedisCache and LocalMemCache are more meaningful than ProdCache and DevCache. A glance at ProductionSettings should tell a lot about how the project is configured.
-
-Modular settings matter. Django uses python based settings and django-configurations turns that into class based settings, so your settings.py doesn't need to pretend it's an config.ini file. Modern ide *goto anything* searches are great and all, but breaking your code up into discrete modules is better, and creating multiple alternative mixins without code sprawl is the payoff.
-
-For local app configuration Pavlova recommends defining your defaults in an app_settings.py module in your app's package, and putting any project overrides in it's own <app name>.py module in the settings directory or in a related module settings file and class - i.e. if you have a bunch of custom cache timeouts in different app views then app/app_settings.py and settings/cache.py is where they belong.
 
 
 Acknowledgements
 -----------------
 
- - The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings.
+ - The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings... which we then break.
