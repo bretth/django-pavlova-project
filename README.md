@@ -6,7 +6,7 @@ A project template for Django 1.5 using django-configurations for class based se
 Creating your project
 ----------------------
 
-First, make sure you are using virtualenv, and virtualenvwrapper (http://virtualenvwrapper.readthedocs.org). To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
+First, make sure you are using virtualenv, and virtualenvwrapper (http://virtualenvwrapper.readthedocs.org). The bootstrap script uses the bash shell. To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
 
     $ mkproject dessert
     $ bash <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
