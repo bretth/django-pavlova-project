@@ -6,7 +6,7 @@ A zero configuration project template for Django 1.5 using [django-configuration
 Requirements
 -------------
 
-This project assumes you are using **virtualenv**, and **[virtualenvwrapper](http://virtualenvwrapper.readthedocs.org)**. The quickstart bootstrap script and install command is for a posix based system, and we use **curl** to download it.
+The bar is low. This project assumes you are using **virtualenv**, and **[virtualenvwrapper](http://virtualenvwrapper.readthedocs.org)**. The quickstart bootstrap script and install command is for a posix based system, and we use **curl** to download it.
 
 Creating your project
 -----------------------
