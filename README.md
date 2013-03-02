@@ -1,15 +1,20 @@
 django-pavlova-project
 =======================
 
-A project template for Django 1.5 using [django-configurations](https://github.com/jezdez/django-configurations/) for class based settings and [djset](https://github.com/bretth/djset) for secret setting management.
+A zero configuration project template for Django 1.5 using [django-configurations](https://github.com/jezdez/django-configurations/) for class based settings and [djset](https://github.com/bretth/djset) for secret setting management.
+
+Requirements
+-------------
+
+This project assumes you are using **virtualenv**, and **[virtualenvwrapper](http://virtualenvwrapper.readthedocs.org)**. The quickstart bootstrap script and install command is for a posix based system, and we use **curl** to download it.
 
 Creating your project
-----------------------
+-----------------------
 
-First, make sure you are using virtualenv, and virtualenvwrapper (http://virtualenvwrapper.readthedocs.org). The bootstrap script uses the bash shell. To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
+To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
 
     $ mkproject dessert
-    $ bash <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
+    $ sh <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
 
 If you listened to your mamma about running unknown shell scripts from the web, the bootstrap.sh script is just a shortcut for the following:
 
