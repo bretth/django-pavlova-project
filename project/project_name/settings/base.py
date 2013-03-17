@@ -1,7 +1,5 @@
 
 from os.path import abspath, basename, dirname
-from sys import path
-
 
 DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 
