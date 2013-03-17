@@ -18,12 +18,15 @@ class Template(object):
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
     TEMPLATE_LOADERS = (
+        ('django.template.loaders.cached.Loader', (
         'django.template.loaders.filesystem.Loader',
         'django.template.loaders.app_directories.Loader',
+        )),
     )
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
     TEMPLATE_DIRS = (
         normpath(join(SITE_ROOT, 'templates')),
     )
+
 
