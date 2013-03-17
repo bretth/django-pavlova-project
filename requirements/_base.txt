@@ -6,5 +6,5 @@ django-model-utils==1.1.0
 git+git://github.com/bretth/djset.git#egg=djset
 # psycopg2==2.4.6
 South==0.7.6
-# install the local setup.py package
+# install the local setup.py package in develop mode
 -e .
