@@ -4,7 +4,7 @@ from djset import config, secret
 
 from .apps import Apps, AppsDebug
 from .cache import LocalMemCache, DummyCache
-from .db import PostgresDB, SqliteDB, Fixtures
+from .db import PostgresDB, SqliteDB
 from .email import EmailSMTP, EmailConsole, EmailInMemory
 from .locale import Locale
 from .logging import LoggingSendEmail
@@ -14,7 +14,6 @@ from .template import Template
 
 class BaseSettings(
     Apps,
-    Fixtures,
     SqliteDB,
     Locale,
     Template,

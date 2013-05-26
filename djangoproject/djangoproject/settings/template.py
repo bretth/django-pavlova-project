@@ -1,6 +1,6 @@
 from os.path import join, normpath
 
-from .base import SITE_ROOT
+from .base import PROJECT_ROOT
 
 class Template(object):
     """ Template Configuration """
@@ -26,7 +26,7 @@ class Template(object):
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
     TEMPLATE_DIRS = (
-        normpath(join(SITE_ROOT, 'templates')),
+        normpath(join(PROJECT_ROOT, 'templates')),
     )
 
 

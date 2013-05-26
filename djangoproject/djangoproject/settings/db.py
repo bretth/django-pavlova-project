@@ -1,10 +1,8 @@
 from os.path import join, normpath
 from urlparse import urlparse, uses_netloc
+import sys
 
 from djset import secret
-
-from .base import DJANGO_ROOT, SITE_ROOT
-
 
 uses_netloc.append('postgres')
 
@@ -15,7 +13,7 @@ class SqliteDB(object):
         return {
                     'default': {
                         'ENGINE': 'django.db.backends.sqlite3',
-                        'NAME': normpath(join(DJANGO_ROOT, 'default.db')),
+                        'NAME': normpath(join(sys.prefix, 'default.db')),
                         'USER': '',
                         'PASSWORD': '',
                         'HOST': '',
@@ -45,13 +43,6 @@ class PostgresDB(object):
                     }
                 }
     
-    
-class Fixtures(object):
-    """ Fixture Configuration """
-    # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-FIXTURE_DIRS
-    FIXTURE_DIRS = (
-        normpath(join(SITE_ROOT, 'fixtures')),
-    )
     
     
     

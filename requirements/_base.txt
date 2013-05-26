@@ -1,10 +1,12 @@
-bpython==0.12
-d2to1==0.2.7
-django-braces==0.2.1
-git+git://github.com/jezdez/django-configurations.git#egg=configurations
-django-model-utils==1.1.0
+# All production packages go here.
+# Freeze versions in place after initial development installation
+bpython
+d2to1
+django-braces
+django-configurations
+django-model-utils
 git+git://github.com/bretth/djset.git#egg=djset
-# psycopg2==2.4.6
-South==0.7.6
+# psycopg2
+South
 # install the local setup.py package in develop mode
 -e .

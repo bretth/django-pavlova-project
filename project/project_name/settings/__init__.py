@@ -1,1 +1,0 @@
-from ._settings import DevSettings, ProductionSettings, TestSettings
