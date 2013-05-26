@@ -1,7 +1,7 @@
 # these settings may be imported by any settings file
 from os.path import abspath, basename, dirname, getenv
 
-PROJECT_ROOT = dirname(dirname(abspath(__file__))))
+PROJECT_ROOT = dirname(dirname(abspath(__file__)))
 
 PACKAGES_ROOT = dirname(PROJECT_ROOT)
 
