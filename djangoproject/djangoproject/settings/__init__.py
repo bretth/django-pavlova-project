@@ -27,7 +27,7 @@ class BaseSettings(
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
     SECRET_KEY = r"{{ secret_key }}"
     
-    ROOT_URLCONF = '{{ project_name }}.urls'
+    ROOT_URLCONF = 'djangoproject.urls'
 
 
 class ProductionSettings(
