@@ -16,6 +16,10 @@ To create a project called ``dessert`` you can bootstrap it the short way with a
     $ mkproject dessert
     $ sh <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
 
+or for the development version of django.
+
+    $ sh <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert dev
+
 If you listened to your mamma about running unknown shell scripts from the web, the bootstrap.sh script is just a shortcut for the following:
 
     $ pip install django
@@ -61,4 +65,4 @@ A *dev* app holds local fixtures (or factory objects) for loading into the devel
 Acknowledgements
 -----------------
 
- - The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings... which we then break.
+The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings... which we then break.
