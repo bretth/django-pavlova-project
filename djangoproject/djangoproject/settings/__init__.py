@@ -1,8 +1,9 @@
-
+from os.path import join, normpath
 from configurations import Settings
 from djset import config, secret
 
 from .apps import Apps, AppsDebug
+from .base import SITE_ROOT
 from .cache import LocalMemCache, DummyCache
 from .db import PostgresDB, SqliteDB
 from .email import EmailSMTP, EmailConsole, EmailInMemory
@@ -77,4 +78,4 @@ class TestSettings(
     DummyCache,
     BaseSettings):
     
-    pass
+    TEST_DISCOVER_ROOT = normpath(join(SITE_ROOT, 'test-py'))
