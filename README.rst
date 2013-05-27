@@ -1,32 +1,28 @@
 django-pavlova-project
 =======================
 
-A zero configuration project template for Django 1.5 using [django-configurations](https://github.com/jezdez/django-configurations/) for class based settings and [djset](https://github.com/bretth/djset) for secret setting management.
+A zero configuration project template for Django 1.5 using django-configurations_ for class based settings and djset_ https://github.com/bretth/djset for secret setting management. Structured to play nice with frontend javascript frameworks.
 
 Requirements
 -------------
 
-The bar is low. This project assumes you are using **virtualenv**, and **[virtualenvwrapper](http://virtualenvwrapper.readthedocs.org)**. The quickstart bootstrap script and install command is for a posix based system, and we use **curl** to download it.
+The bar is low. This project assumes you are using *virtualenv*, and virtualenvwrapper_. The quickstart bootstrap script and install command is for a posix based system, and we use *curl* to download it.
 
 Creating your project
 -----------------------
 
 To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
 
+.. code-block:: bash
+
     $ mkproject dessert
     $ sh <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert
 
 or for the development version of django.
 
-    $ sh <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert dev
+.. code-block:: bash
 
-If you listened to your mamma about running unknown shell scripts from the web, the bootstrap.sh script is just a shortcut for the following:
-
-    $ pip install django
-    $ django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json,cfg dessert .
-    $ pip install -r requirements/dev.txt
-    $ chmod +x manage.py
-    $ python manage.py syncdb --noinput
+    $ sh <(curl -s https://raw.github.com/bretth/django-pavlova-project/master/bootstrap.sh) dessert --dev
 
 A superuser is created by default (in development only) with the login and password ``admin``.
 
@@ -57,7 +53,7 @@ The pavlova project templates is intended for larger projects where the standard
 
 Pavlova uses the sqlite3 database for a quickstart however switching to postgresql is recommended for all but the smallest projects.
 
-A minimal setup.cfg and setup.py is used to install the project in the path, and hold project metadata.
+A minimal setup.cfg and setup.py is used to install the project in the path in ``develop`` mode, and hold project metadata.
 
 A *dev* app holds local fixtures (or factory objects) for loading into the development environment starting with a superuser.
 
@@ -66,3 +62,7 @@ Acknowledgements
 -----------------
 
 The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings... which we then break.
+
+.. _django-configurations: https://github.com/jezdez/django-configurations/
+.. _djset https://github.com/bretth/djset
+.. _virtualenvwrapper http://virtualenvwrapper.readthedocs.org
