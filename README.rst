@@ -1,7 +1,7 @@
 django-pavlova-project
 =======================
 
-A zero configuration project template for Django 1.5 using django-configurations_ for class based settings and djset_ https://github.com/bretth/djset for secret setting management. Structured to play nice with frontend javascript frameworks.
+A zero configuration project template for Django 1.5 using django-configurations_ for class based settings and djset_ for secret setting management. Structured to play nice with frontend javascript frameworks.
 
 Requirements
 -------------
