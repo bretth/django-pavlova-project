@@ -11,7 +11,7 @@ The bar is low. This project assumes you are using *virtualenv*, and virtualenvw
 Creating your project
 -----------------------
 
-To create a project called ``dessert`` you can bootstrap it the short way with a bash script or the slightly longer way. The short way first.
+To create a project called ``dessert``, bootstrap it..
 
 .. code-block:: bash
 
