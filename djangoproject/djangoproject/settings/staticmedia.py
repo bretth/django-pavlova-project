@@ -14,7 +14,7 @@ class LocalStatic(object):
     
     # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
     STATICFILES_DIRS = (
-        normpath(join(SITE_ROOT, 'static')),
+        normpath(join(SITE_ROOT, 'app')),
     )
     
 
@@ -28,7 +28,7 @@ class LocalMedia(object):
     """ Media Configuration """    
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-    MEDIA_ROOT = normpath(join(SITE_ROOT, 'media'))
+    MEDIA_ROOT = normpath(join(SITE_ROOT, '.media'))
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
     MEDIA_URL = '/media/'   
