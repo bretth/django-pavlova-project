@@ -37,9 +37,9 @@ class Apps(object):
     
 class AppsDebug(object):
     """ App configuration plus Debug toolbar """
-    
-    # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
-    INSTALLED_APPS = Apps.INSTALLED_APPS + (
-        'debug_toolbar',
-    )
+    if sys.version_info.major == 2:
+        # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
+        INSTALLED_APPS = Apps.INSTALLED_APPS + (
+            'debug_toolbar',
+        )
     
