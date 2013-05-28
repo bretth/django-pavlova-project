@@ -64,5 +64,5 @@ Acknowledgements
 The django-pavlova-project draws on the excellent https://github.com/twoscoops/django-twoscoops-project/ for it's thoughtful layout and some base settings... which we then break.
 
 .. _django-configurations: https://github.com/jezdez/django-configurations/
-.. _djset https://github.com/bretth/djset
-.. _virtualenvwrapper http://virtualenvwrapper.readthedocs.org
+.. _djset: https://github.com/bretth/djset
+.. _virtualenvwrapper: http://virtualenvwrapper.readthedocs.org
