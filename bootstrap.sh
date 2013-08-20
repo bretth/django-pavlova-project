@@ -23,6 +23,10 @@ fi
 echo $PR$DJANGO
 $DJANGO
 echo
+SP="django-admin.py startproject --template=https://github.com/bretth/django-pavlova-project/zipball/master --extension=py,rst,html,json,cfg $1 ."
+echo $PR$SP
+$SP
+echo
 REQ="pip install -r requirements/dev.txt"
 echo $PR$REQ
 $REQ
