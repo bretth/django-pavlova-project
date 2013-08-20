@@ -1,4 +1,4 @@
 # Test dependencies go here.
 -r _base.txt
 coverage
-django-discover-runner
+nose2django

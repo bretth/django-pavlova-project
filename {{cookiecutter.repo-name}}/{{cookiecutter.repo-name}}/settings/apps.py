@@ -1,3 +1,4 @@
+import sys
 
 class Apps(object):
     """ App configuration """
@@ -37,6 +38,7 @@ class Apps(object):
     
 class AppsDebug(object):
     """ App configuration plus Debug toolbar """
+    # django-debug-toolbar is not py3 compatible
     if sys.version_info.major == 2:
         # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
         INSTALLED_APPS = Apps.INSTALLED_APPS + (

@@ -35,6 +35,8 @@ You should replace this README with your own.
 Deployment Notes
 ------------------
 
+You should fix the requirements files with the specific versions as output by pip freeze.
+
 Project deployment is out of scope for this template, but you should only need to change one environment variable in production ``DJANGO_CONFIGURATION=ProductionSettings``. You can also set ``SETTINGS_PROMPT=False`` if you don't want to be prompted for missing secrets (and have an error raised instead).
 
 Unlike some recommendations to use django-admin.py in production, you will need to use *manage.py*. You can edit that to customize environment variables defaults before settings are loaded.

@@ -3,7 +3,7 @@ from configurations import Settings
 from djset import config, secret
 
 from .apps import Apps, AppsDebug
-from .base import SITE_ROOT
+from .filepaths import SITE_ROOT
 from .cache import LocalMemCache, DummyCache
 from .db import PostgresDB, SqliteDB
 from .email import EmailSMTP, EmailConsole, EmailInMemory
@@ -12,6 +12,8 @@ from .logging import LoggingSendEmail
 from .middleware import Middleware, MiddlewareDebug
 from .staticmedia import LocalMedia, LocalStatic
 from .template import Template
+
+
 
 class BaseSettings(
     Apps,
@@ -77,5 +79,5 @@ class TestSettings(
     EmailInMemory, 
     DummyCache,
     BaseSettings):
-    
-    TEST_DISCOVER_ROOT = normpath(join(SITE_ROOT, 'test-py'))
+    pass
+

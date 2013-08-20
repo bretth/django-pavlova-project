@@ -1,6 +1,6 @@
 from os.path import join, normpath
 
-from .base import SITE_ROOT
+from .filepaths import SITE_ROOT
 
 
 class LocalStatic(object):
@@ -31,12 +31,5 @@ class LocalMedia(object):
     MEDIA_ROOT = normpath(join(SITE_ROOT, '.media'))
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
-    MEDIA_URL = '/media/'   
-    
-
-
-    
-
-    
-
+    MEDIA_URL = '/media/'
 

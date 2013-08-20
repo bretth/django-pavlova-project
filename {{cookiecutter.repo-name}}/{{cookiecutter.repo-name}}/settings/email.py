@@ -1,6 +1,6 @@
 from djset import config, secret
 
-from .base import SITE_NAME
+from djangoproject import name
 
 
 class EmailSMTP(object):
@@ -27,7 +27,7 @@ class EmailSMTP(object):
         return config.get('EMAIL_PORT', 587)
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
-    EMAIL_SUBJECT_PREFIX = '[%s] ' % SITE_NAME
+    EMAIL_SUBJECT_PREFIX = '[%s] ' % name
     
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-use-tls
     EMAIL_USE_TLS = True

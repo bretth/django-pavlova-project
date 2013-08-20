@@ -1,8 +1,8 @@
 from os.path import join, normpath
-try
+try:
     from urlparse import urlparse, uses_netloc
 except ImportError:
-    from urllib.urlparse import urlparse, uses_netloc
+    from urllib.parse import urlparse, uses_netloc
 import sys
 
 from djset import secret

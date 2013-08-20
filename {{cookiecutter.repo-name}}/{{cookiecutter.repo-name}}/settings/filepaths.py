@@ -7,6 +7,4 @@ PACKAGES_ROOT = dirname(PROJECT_ROOT)
 
 SITE_ROOT = dirname(PACKAGES_ROOT)
 
-# Site name:
-SITE_NAME = '{{ project_name }}'
 

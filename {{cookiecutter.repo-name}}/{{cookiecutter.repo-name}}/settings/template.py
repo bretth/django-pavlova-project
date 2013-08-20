@@ -1,6 +1,6 @@
 from os.path import join, normpath
 
-from .base import SITE_ROOT
+from .filepaths import SITE_ROOT
 
 class Template(object):
     """ Template Configuration """

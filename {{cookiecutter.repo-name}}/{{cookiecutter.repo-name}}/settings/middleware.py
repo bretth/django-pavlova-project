@@ -1,3 +1,4 @@
+import sys
 
 class Middleware(object):
     """ Middleware Configuration """
@@ -14,10 +15,10 @@ class Middleware(object):
 
 
 class MiddlewareDebug(object):
-    
-    # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
-    MIDDLEWARE_CLASSES = Middleware.MIDDLEWARE_CLASSES + (
-        'debug_toolbar.middleware.DebugToolbarMiddleware',
-    )
-    # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
-    INTERNAL_IPS = ('127.0.0.1',)
+    if sys.version_info.major == 2:
+        # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
+        MIDDLEWARE_CLASSES = Middleware.MIDDLEWARE_CLASSES + (
+            'debug_toolbar.middleware.DebugToolbarMiddleware',
+        )
+        # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
+        INTERNAL_IPS = ('127.0.0.1',)

@@ -1,2 +1,3 @@
-django==1.5
+# Freeze version in place after initial development installation
+django
 -r _base.txt

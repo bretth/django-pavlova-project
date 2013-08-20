@@ -1,3 +1,5 @@
 # Development dependencies go here
 -r test.txt
-git+git://github.com/django-debug-toolbar/django-debug-toolbar#egg=django-debug-toolbar
+
+# python 2 only
+# git+git://github.com/django-debug-toolbar/django-debug-toolbar#egg=django-debug-toolbar
